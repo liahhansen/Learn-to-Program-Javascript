@@ -8,12 +8,13 @@
     $(document).ready(function() {
 		  function duckDuckMoose() {
 		    var randNum = Math.floor(Math.random()*11)
+		    var origRandNum = randNum;
 		    while (randNum > 0) {
 		      alert("duck");
 		      --randNum
 		    } 
 		    alert("MOOSE!");
-		    $("#duck").text("there were " + randNum + " ducks")       
+		    $("#duck").text("there were " + origRandNum + " ducks")       
       };
       
       duckDuckMoose();
