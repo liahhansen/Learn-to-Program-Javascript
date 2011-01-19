@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Numbers Divisible by 2 and/or 3</title>
+		<script type="text/javascript" src="../../../jasmine/lib/jquery.js"></script>
+	  
+		<script type="text/javascript">
+    $(document).ready(function() {
+		  function twoAndThree() {
+        var sum = 0;
+        for(var i=0; i<=1000; i++) {
+            if ((i % 3 == 0) && (i % 2 == 0)) {
+                sum += i;
+            }
+        }
+        $("#two-and-three").text(sum)
+      };
+      
+      function twoOrThree() {
+        var sum = 0;
+        for(var i=0; i<=1000; i++) {
+            if ((i % 3 == 0) || (i % 2 == 0)) {
+                sum += i;
+            }
+        }
+        $("#two-or-three").text(sum)
+      };
+      
+      twoOrThree();
+      twoAndThree();
+    });
+
+		
+
+	  </script>
+	</head>
+	<body> 
+	  <h2>The sum of all numbers divisible by two and three is:</h2>
+	  <div id="two-and-three"></div>
+	  <h2>The sum of all numbers divisible by two and three is:</h2>
+	  <div id="two-or-three"></div>
+	</body>
+</html>

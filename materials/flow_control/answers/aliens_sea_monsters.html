@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Aliens and Sea Monster Invasion!</title>
+		<script type="text/javascript" src="../../../jasmine/lib/jquery.js"></script>
+	  
+		<script type="text/javascript">
+    $(document).ready(function() {
+		  function willTheySurvive() {
+        // hmmm...
+        var poison = prompt("how much poison do you have?");
+        var knives = prompt("how many knives do you have?");
+        var armor = prompt("how much armor do you have?");
+        var name = prompt("what is your name");
+        var survive = false;
+        
+        if (name == "Odysseus" || name == "Lancelot") {
+          if (poison > 52 && knives > 14 && armor > 28) {
+            survive = true;
+          };
+        } else if (poison > 104 && knives > 28 && armor > 56) {
+          survive = true
+        };
+        if (survive == true) {
+          $('#survival-status').text("You survived! Congratulations")
+        } else {
+          $('#survival-status').text("You did not survive.  Sorry!")
+        };
+      }
+      
+      willTheySurvive();
+    });
+
+		
+
+	  </script>
+	</head>
+	<body> 
+	  <div id="survival-status"></div>
+	</body>
+</html>
