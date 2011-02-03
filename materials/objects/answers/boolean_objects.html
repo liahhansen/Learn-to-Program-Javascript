@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Boolean Objects</title>
+		<script type="text/javascript" src="../../../jasmine/lib/jquery.js"></script>
+	  
+		<script type="text/javascript">
+    function booleanObjects() {  
+      var bool = new Boolean(true);
+      var num = 3;
+      
+      while(bool == true) {
+        if(num == 0) {
+          bool = false
+        }
+        alert(num)
+        num -= 1;
+      }      
+    };
+    $(document).ready(booleanObjects(););
+
+		
+
+	  </script>
+	</head>
+	<body> 
+	  <div id="strings"></div>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>String Objects</title>
+		<script type="text/javascript" src="../../../jasmine/lib/jquery.js"></script>
+	  
+		<script type="text/javascript">
+    function stringObjects() {  
+      alert("Computers are useless.  They can only give you answers.".split(" "));
+      alert("Computers are useless.  They can only give you answers.".substr(-8,8));
+      alert("Computers are useless.  They can only give you answers.".charAt(23));
+      var s = "Computers are useless.  They can only give you answers.".slice(0,9)
+      alert(s);     
+    };
+    $(document).ready(stringObjects(););
+
+		
+
+	  </script>
+	</head>
+	<body> 
+	  <div id="strings"></div>
+	</body>
+</html>
