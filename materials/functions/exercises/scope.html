@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Scope</title>
+		<script type='text/javascript'>
+		  var globalVar = "globalVar";
+      // console.log(baseVar, innerVar); ReferenceError: baseVar is not defined
+
+      function baseFunction() {
+          console.log("baseFunction sees: ", globalVar);
+          var baseVar = "baseVar";
+          // console.log(innerVar);  ReferenceError: innerVar is not defined  
+
+          function innerFunction() {
+              console.log("innerFunction sees: ", globalVar);
+              console.log("innerFunction sees: ", baseVar);
+              var innerVar = "innerVar";        
+          }
+          
+          function innerFunction2() {
+             // console.log("innerFunction2 can't see: ", innerVar); innerVar is not defined
+          }
+
+          innerFunction();
+          innerFunction2();
+      }
+
+      baseFunction()
+		</script>
+	</head>
+	<body> 
+	</body>
+</html>

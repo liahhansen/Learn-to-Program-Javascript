@@ -1,0 +1,14 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Lexical Scope</title>
+		<script type='text/javascript'>
+      var b = [ function(x) {return x}, function(x) {return x*x}, function(x) {return x*x*x} ];
+      console.log(b[0](4))
+      console.log(b[1](4))
+      console.log(b[2](4))
+		</script>
+	</head>
+	<body> 
+	</body>
+</html>
