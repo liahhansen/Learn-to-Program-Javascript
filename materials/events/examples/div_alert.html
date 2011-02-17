@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Div Alert</title>
+		<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+		<script>
+    	function divAlert() {
+        var element = $('div');
+        
+        element.click(function(event) {
+          alert(event.type + " " + $(this).text());
+        });
+        
+        element.mouseup(function(event) {
+          alert(event.type + " " + $(this).text());
+        });
+        
+        // element.bind('click mouseup', function(event) {
+        //   alert(event.type + " " + $(this).text());
+        // });
+    	};
+      
+      $(document).ready(divAlert);
+    </script>
+	</head>
+	<body> 
+    <div>Super</div>
+    <div>Bouncy</div>
+    <div>Fun</div>
+    <div>Rainbow</div>
+	</body>
+</html>

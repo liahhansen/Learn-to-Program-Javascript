@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Striped Table</title>
+    <!-- adapted from: http://docs.jquery.com/Tutorials:Zebra_Striping_Made_Easy -->
+		<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+		<script>
+    	function addStripe() {
+        $(".stripe tr:even").addClass("even");
+        $(".stripe tr").mouseover(function() {
+          $(this).addClass("over")
+        })
+        
+        $(".stripe tr").mouseout(function() {
+          $(this).removeClass("over")
+        })
+    	};
+      
+      $(document).ready(addStripe);
+    </script>
+    <style>
+      table th {
+          background: none repeat scroll 0 0 #3E83C9;
+          border-right: 1px solid #FFFFFF;
+          color: #FFFFFF;
+          font-weight: bold;
+          line-height: 1.2;
+          padding: 2px 11px;
+          text-align: left;
+      }
+      tr.even td {
+        background:#ecf6fc;
+      }
+      
+      tr.over td {
+          background: none repeat scroll 0 0 #BCD4EC;
+      }
+    </style>
+	</head>
+	<body> 
+    <table class="stripe">
+
+    	<thead>
+
+    		<tr>
+    			<th>Lorem</th>
+    			<th>Ipsum</th>
+    			<th>Dolor</th>
+    			<th>Sit</th>
+
+    			<th>Amet</th>
+
+    		</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+    			<td>Lorem</td>
+    			<td>Ipsum</td>
+
+    			<td>Dolor</td>
+
+    			<td>Sit</td>
+    			<td>Amet</td>
+    		</tr>
+    		<tr>
+    			<td>Lorem</td>
+
+    			<td>Ipsum</td>
+    			<td>Dolor</td>
+
+    			<td>Sit</td>
+    			<td>Amet</td>
+    		</tr>
+    		<tr>
+
+    			<td>Lorem</td>
+    			<td>Ipsum</td>
+    			<td>Dolor</td>
+
+    			<td>Sit</td>
+    			<td>Amet</td>
+
+    		</tr>
+
+    		<tr>
+    			<td>Lorem</td>
+    			<td>Ipsum</td>
+    			<td>Dolor</td>
+
+    			<td>Sit</td>
+
+    			<td>Amet</td>
+
+    		</tr>
+    		<tr>
+    			<td>Lorem</td>
+    			<td>Ipsum</td>
+    			<td>Dolor</td>
+
+    			<td>Sit</td>
+
+    			<td>Amet</td>
+    		</tr>
+    		<tr>
+    			<td>Lorem</td>
+    			<td>Ipsum</td>
+
+    			<td>Dolor</td>
+
+    			<td>Sit</td>
+    			<td>Amet</td>
+    		</tr>
+    		<tr>
+    			<td>Lorem</td>
+
+    			<td>Ipsum</td>
+    			<td>Dolor</td>
+
+    			<td>Sit</td>
+    			<td>Amet</td>
+    		</tr>
+    		<tr>
+
+    			<td>Lorem</td>
+    			<td>Ipsum</td>
+
+    			<td>Dolor</td>
+
+    			<td>Sit</td>
+    			<td>Amet</td>
+
+    		</tr>
+    		<tr>
+    			<td>Lorem</td>
+
+    			<td>Ipsum</td>
+    			<td>Dolor</td>
+
+    			<td>Sit</td>
+
+    			<td>Amet</td>
+    		</tr>
+    		<tr>
+
+    			<td>Lorem</td>
+    			<td>Ipsum</td>
+    			<td>Dolor</td>
+
+    			<td>Sit</td>
+    			<td>Amet</td>
+    		</tr>
+
+    	</tbody>
+    </table>
+    
+	</body>
+</html>

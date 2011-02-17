@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Input Help Text</title>
+		<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+		<script>
+		  function helpText() {
+		    var helpText = "Please enter your search"
+		    if($.trim($('#help-text').val()) == "") {
+            $('#help-text').val(helpText);
+        }
+        
+        $('#help-text').focus( function() {
+          if ($(this).val() == helpText) {
+            $(this).val("")
+          };
+        })
+        
+        $('#help-text').blur( function() {
+          if ($(this).val() == "") {
+            $(this).val(helpText)
+          };
+        })
+		    
+		  }
+		  
+		  $(document).ready(helpText);
+		  
+		</script>
+	</head>
+	<body> 
+    Search: <input type="text" id="help-text"></input>
+	</body>
+</html>

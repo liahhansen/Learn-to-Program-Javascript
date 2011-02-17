@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>String Objects</title>
+		<script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+	  
+		<script>
+    	function stringObjects() {
+    	  var split = "Computers are useless.  They can only give you answers.".split(" ")
+        var splitElement = $('#split');
+        splitElement.bind( 'click', function() {
+          splitElement.val(split);
+        });
+        
+        var substr = "Computers are useless.  They can only give you answers.".substr(-8,8)
+        var substrElement = $('#substr');
+        substrElement.focus(function() {
+          substrElement.val(substr);
+        });
+        
+        var charAt = "Computers are useless.  They can only give you answers.".charAt(24)
+        var charAtElement = $('#charAt');
+        charAtElement.focus(function() {
+          charAtElement.val(charAt);
+        });
+        
+        var slice = "Computers are useless.  They can only give you answers.".slice(0,9)
+        var sliceElement = $('#slice');
+        sliceElement.bind( 'focus', function() {
+          sliceElement.val(slice);
+        });
+    	};
+      
+      $(document).ready(stringObjects);
+    </script>
+	</head>
+	<body> 
+    <p id="para">
+  	  Split: <input type="text" id="split"></input>      
+    </p>
+    <p>
+  	  Substr: <input type="text" id="substr"></input>      
+    </p>
+    <p>
+  	  CharAt: <input type="text" id="charAt"></input>      
+    </p>
+    <p>
+  	  Slice: <input type="text" id="slice"></input>
+    </p>
+	</body>
+</html>
